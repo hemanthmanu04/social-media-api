@@ -11,21 +11,20 @@ const UserSchema = new mongoose.Schema(
     },
     email: {
       type: String,
-      require: true,
+      required: true,
       max: 50,
       unique: true,
     },
     password: {
       type: String,
-      require: true,
-      min: 8,
-      unique: true,
+      required: true,
+      min: 6,
     },
-    ProfilePicture: {
+    profilePicture: {
       type: String,
       default: "",
     },
-    DefaultPicture: {
+    coverPicture: {
       type: String,
       default: "",
     },
@@ -43,7 +42,7 @@ const UserSchema = new mongoose.Schema(
     },
     desc: {
       type: String,
-      max: 75,
+      max: 50,
     },
     city: {
       type: String,
